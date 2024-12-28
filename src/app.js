@@ -54,6 +54,5 @@ app.use((req, res, next) => {
 // Middleware de manejo de errores global
 app.use(errorHandler);
 
-// Puerto y servidor
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
+// Exportar solo la app (sin escuchar el puerto)
+module.exports = app;
